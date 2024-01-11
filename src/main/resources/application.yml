@@ -1,0 +1,39 @@
+server:
+    port: 29222
+
+hddolby:
+    # 官种页面（带排序参数）
+    url: https://www.hddolby.com/torrents.php?inclbookmarked=0&incldead=1&spstate=0&team1=1&team10=1&team12=1&team13=1&&sort=7&type=asc&page=
+    # cookie【需要修改】
+    cookie: xxx
+    # 下载的种子文件的downhash（passkey）【需要修改】
+    downhash: xxx
+    # 保种最大大小（GB）【需要修改】
+    maxDefendSize: 200
+    # qb保种标签【注意：如果已有保种，第一次需要在qb手动添加标签】
+    tag: dolby保种
+    # 只对发布时间超过【publishDay】天且做种人数【maxSeeder】内且下载人数【maxLeecher】内的种子进行下载
+    # 发布时间
+    publishDay: 10
+    # 最大做种数
+    maxSeeder: 5
+    # 最小做种数（避免加入盒子大军）
+    maxLeecher: 3
+    # 放弃保种阈值
+    giveupSeeder: 7
+
+qbittorrent:
+    # qb地址【需要修改】
+    url: http://127.0.0.1:8085
+    # 用户名【需要修改】
+    username: admin
+    # 密码【需要修改】
+    password: adminadmin
+    # 保存路径【需要修改】
+    savePath: /pt/hddolby
+    # 最大上传速度（MB）
+    uploadLimit: 50
+
+quartz:
+    # 时间正则
+    cron: 0 0 0/12 * * ?
