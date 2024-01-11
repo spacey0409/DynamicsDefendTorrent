@@ -1,0 +1,17 @@
+version: '3'
+services:
+  dynamics_defend_torrent:
+    image: spacey0409/dynamics_defend_torrent:1.0.0
+    restart: always
+    container_name: dynamics_defend_torrent
+    ports:
+      - 29222:29222
+    volumes:
+      - 【源qb路径】:【映射后qb路径】
+      - 【】:/application.yml
+    environment:
+      - PUID=0
+      - PGID=0
+      - UMASK=000
+      - HLINK_HOME=/config
+    command: java -jar /joey/server/DynamicsDefendTorrent-1.0.0.jar --spring.config.location=/application.yml
