@@ -9,9 +9,4 @@ services:
     volumes:
       - 【源qb路径】:【映射后qb路径】
       - 【】:/application.yml
-    environment:
-      - PUID=0
-      - PGID=0
-      - UMASK=000
-      - HLINK_HOME=/config
     command: java -jar /joey/server/DynamicsDefendTorrent-1.0.0.jar --spring.config.location=/application.yml
