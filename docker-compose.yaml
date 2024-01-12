@@ -6,7 +6,8 @@ services:
     container_name: dynamics_defend_torrent
     ports:
       - 29222:29222
+    network_mode: bridge
     volumes:
-      - 【源qb路径】:【映射后qb路径】
-      - 【】:/application.yml
+      - 【修改后的application.yml文件路径】:/application.yml
+    # 启动命令【不需要修改】
     command: java -jar /joey/server/DynamicsDefendTorrent-1.0.0.jar --spring.config.location=/application.yml

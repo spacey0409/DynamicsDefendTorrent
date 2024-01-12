@@ -12,7 +12,3 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 EXPOSE 29222
 
 ADD https://ghproxy.com/https://github.com/spacey0409/DynamicsDefendTorrent/releases/download/1.0.0/DynamicsDefendTorrent-1.0.0.jar ./DynamicsDefendTorrent-1.0.0.jar
-
-ENTRYPOINT ["java", \
-            "-Djava.security.egd=file:/dev/./urandom", \
-            "-jar", "DynamicsDefendTorrent-1.0.0.jar"]
